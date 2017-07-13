@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photos</h1>
+
+<% @photos.each do |photo| %>
+<center>
+<div 
+< class="jumbotron" style="max-width: 500px">
+  <%= image_tag photo.image, class: "img-responsive" %>
+</div>
+</center>
+<% end %>
