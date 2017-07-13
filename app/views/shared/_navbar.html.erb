@@ -21,6 +21,9 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <% if(!user_signed_in?) %>
+        <li>
+            <%= link_to 'New Selfie', new_photo_path %>
+          </li>
           <li>
             <%= link_to 'Sign Up', new_user_registration_path %>
           </li>
