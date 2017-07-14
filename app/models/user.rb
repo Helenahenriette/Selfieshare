@@ -6,4 +6,5 @@ class User < ApplicationRecord
          
   has_many :posts
   has_many :photos
+  has_many :friendships
 end

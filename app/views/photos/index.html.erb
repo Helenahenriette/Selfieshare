@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><font color= "#73757a">Photos</font></h1>
+<h1><font color= "#73757a">Friends Photos</font></h1>
 
 <% @photos.each do |photo| %>
 <center>
@@ -9,24 +9,4 @@
   <%= image_tag photo.image, class: "img-responsive" %>
 </div>
 </center>
-
-<style>
-body, html {
-    height: 100%;
-}
-
-body { 
-    /* The image used */
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQngtcg_F0cJSKhHf34hp883XNBnvSlDUVPePC-6L9YooFkLRD");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-</style>
-
 <% end %>

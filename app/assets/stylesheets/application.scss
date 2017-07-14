@@ -1,3 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body, html {
+    height: cover;
+}
+
+body { 
+    /* The image used */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQngtcg_F0cJSKhHf34hp883XNBnvSlDUVPePC-6L9YooFkLRD");
+
+    /* Full height */
+    height: cover; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #73757a;
+}

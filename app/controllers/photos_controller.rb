@@ -1,10 +1,12 @@
 class PhotosController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all.reverse_order
+    @friendships = Friendship.all.where(user: current_user).map(&:friend_id)
+    @photos = Photo.all.where(user: @friendships).reverse_order
   end
 
   # GET /photos/1

@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Friends <%= link_to 'Add New Friend', new_friendship_path, class: "btn btn-primary btn-lg" %></h1>
+
+<div class="list-group">
+  <% @friendships.each do |friendship| %>
+    <li class="list-group-item"><%= User.find(friendship.friend_id).email %> <%= link_to 'Remove Friend', friendship, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% end %>
+</div>
